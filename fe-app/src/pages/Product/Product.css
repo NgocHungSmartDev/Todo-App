@@ -23,6 +23,11 @@
   padding-top:50px;
 }
 
+.img img{
+  width: 400px;
+  object-fit: cover;
+}
+
 .infomation{
   display: flex;
   flex-direction: column;
