@@ -18,9 +18,6 @@ function Home() {
     
     return (
       <div className="App">
-      <div className="jumbotron text-center">
-        <h1>Manage Phone</h1>
-      </div>
       <div className="container">
         <Link to='/add-phone' className="btn-add">
           Add Phone

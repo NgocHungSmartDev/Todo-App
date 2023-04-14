@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import {publicRoutes} from './routes'
+import {publicRoutes} from './routes';
+import DefaultLayout from './layouts/DefaultLayout/DefaultLayout';
 
 function App() {
     return (
@@ -14,7 +15,9 @@ function App() {
                   key={index}
                   path={route.path}
                   element={
+                    <DefaultLayout>
                       <Page />
+                    </DefaultLayout>
                   }
                 />
               );
