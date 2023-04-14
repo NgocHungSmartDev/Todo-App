@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import AddPhoneForm from "../../components/AddPhoneForm/AddPhoneForm";
 import './Add.css';
+import axios from "axios";
 
-function Home() {
+function Add() {
 
   const handleAdd = (phone)=>{
-    console.log(phone);
+    axios.post(`http://localhost:8080/api/phone`, phone).then((res) => {
+      console.log(res);
+      console.log(res.data);
+    });
   }
 
   return (
@@ -18,11 +22,11 @@ function Home() {
           View
         </Link>
         <div className="add-phone">
-          <AddPhoneForm onAddUser={handleAdd} />
+          <AddPhoneForm onAddUser={handleAdd} isUpdate={false} />
         </div>
       </div>
     </div>
   );
 }
 
-export default Home;
+export default Add;

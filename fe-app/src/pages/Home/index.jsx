@@ -1,18 +1,23 @@
 import { Link } from "react-router-dom";
 import Card from "../../components/Card";
-import './Home.css'
+import './Home.css';
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 function Home() {
 
-  const phoneTest = [
-    { id: 1, name: "iphone", price: 500 },
-    { id: 2, name: "samsung", price: 600 },
-    { id: 3, name: "oppo", price: 700 },
-    { id: 3, name: "oppo", price: 700 },
-  ];
+  const [phoneTest,SetPhoneTests] = useState([]);
 
-  return (
-    <div className="App">
+  useEffect(()=>{
+     axios.get(`http://localhost:8080/api/phone`).then((response) => {
+       const phones = response.data;
+       console.log(phones);
+       SetPhoneTests(phones);
+      });
+    },[])
+    
+    return (
+      <div className="App">
       <div className="jumbotron text-center">
         <h1>Manage Phone</h1>
       </div>
@@ -22,15 +27,15 @@ function Home() {
         </Link>
         <div className="list-card">
           {phoneTest.map((phone) => {
+            const path = (phone.image) ? "data:image/png;base64," + phone.image : "https://care.ntbprov.go.id/img/noimage.png";
             return (
               <Card
                 key={phone.id}
                 name={phone.name}
                 price={phone.price}
                 id={phone.id}
-                path={
-                  "https://cdn.tgdd.vn/Products/Images/42/264060/samsung-galaxy-s23-600x600.jpg"
-                }
+                brand={phone.brand}
+                path={path}
               />
             );
           })}
