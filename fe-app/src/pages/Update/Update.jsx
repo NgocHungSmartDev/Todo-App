@@ -35,9 +35,6 @@ function Update() {
   
   return (
     <div className="App">
-      <div className="jumbotron text-center">
-        <h1>Update Phone</h1>
-      </div>
       <div className="container">
         <Link to="/" className="btn-add">
           View

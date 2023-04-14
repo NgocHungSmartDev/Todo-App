@@ -26,9 +26,6 @@ function Product() {
   const path = (phone?.image) ? "data:image/png;base64," + phone?.image : "https://care.ntbprov.go.id/img/noimage.png";
   return (
     <div className="detail">
-      <div className="jumbotron text-center">
-        <h1>Detail Phone</h1>
-      </div>
       <div className="container">
         <Link to={`/`} className="btn-add">
           View
