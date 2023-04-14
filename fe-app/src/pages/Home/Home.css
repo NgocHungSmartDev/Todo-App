@@ -12,6 +12,7 @@
   background-color: #fff;
   margin-top: 80px;
   padding-bottom: 50px;
+  border-radius: 5px;
 }
 
 .btn-add{
@@ -25,4 +26,35 @@
   background-color: #dd6e14;
   text-decoration: none;
   margin-top: 30px;
+}
+
+.brand{
+  width: 10%;
+  background-color: #fff;
+  border-radius: 6px;
+  height: 510px;
+  margin-top: 80px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 20px;
+}
+
+.brand-item{
+   font-size: 16px;
+   font-weight: 500;
+   line-height: 40px;
+   cursor: pointer;
+   color: #636363;
+}
+
+.brand-item:hover{
+  background-color: #ebeaea;
+  padding-left: 6px;
+  border-radius: 8px;
+}
+
+.home-display{
+  display: flex;
+  align-items: center;
 }
