@@ -1,0 +1,30 @@
+.detail-product{
+  display:flex;
+  padding:50px 50px;
+  gap:50px;
+}
+.detail-name{
+  font-size: 30px;
+  font-weight: 700px;
+}
+
+.detail-price{
+  font-size: 20px;
+  font-weight: 400px;
+  color:#e45e20;
+}
+
+.detail-btn{
+  display: flex;
+  gap:10px; 
+}
+
+.detail .container{
+  padding-top:50px;
+}
+
+.infomation{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
