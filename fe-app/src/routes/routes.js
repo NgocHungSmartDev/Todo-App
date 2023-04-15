@@ -5,7 +5,7 @@ import Update from "../pages/Update/Update";
 
 export const publicRoutes = [
   { path: "/", component: Home },
-  { path: "/add-phone", component: Add },
+  { path: "/admin", component: Add },
   { path: "/product/:id", component: Product },
   { path: "/update-product/:id", component: Update },
 ];
